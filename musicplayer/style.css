@@ -1,41 +1,124 @@
+:root {
+    --cor-primaria: white;
+}
+
+
+
 body {
-    background: radial-gradient(#9696e4, #4545ee);
-    background-repeat: no-repeat;
-    font-size: 1.2em;
-    width: 50%;
+    background-color:black;
+    font-size: 1em;
+    width: 80%;
     margin: 20px auto;
     padding: 20px;
     text-align: center;
-    min-height: 50vh;
-
+    min-height: 80vh;
+    color: white;
 }
+
+.header {
+    margin: 20px;
+}
+.media-player__container {
+    background: linear-gradient( rgb(14, 13, 13), #2b2b2c);
+    display: flex;
+}
+
+.media-player__controls, 
+.media-player__list--box {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid  black;
+    justify-content: space-around;
+    height: 80vh;
+}
+
+.media-player__controls {
+    align-items: center;
+}
+
+.media-player__controls--btn,
+.media-player__volume {
+    margin: 20px;
+}
+
+.media-player__progress {
+    width: 350px;
+    margin: 20px;
+}
+
+#progress {
+    height: 3px;
+    width: inherit;
+    background-color: white;
+}
+
+.media-player__img {
+    display: flex;
+    flex-shrink: 2;
+    width: 350px;
+    margin: 20px;
+}
+
+
+#image {
+    max-width: inherit;
+}
+
+.media-player__volume svg{
+    margin: 8px;
+}
+
+.media-player__list--box {
+    justify-content: space-between;
+}
+
 
 #songList {
-    background-color: lightcyan;
-    border-radius: 10px;
     text-align: left;
+    padding: 30px;
+    font-size: 20px;
 }
 
-li {
+#songList li {
+    border-bottom: 1px solid lightslategrey;
     padding: 10px;
+    line-height: 50px;
 }
+
 
 li:hover, svg:hover {
     cursor: pointer;
-}
-
-.controls {
-    border: 1px lightgray solid;
-    border-radius: 10px;
-    background: lightcyan;
-    padding: 1.5em;
+    color: var(--cor-primaria);
 }
 
 svg {
-    color: lightslategray;
+    color: var(--cor-primaria);
 }
 
-progress {
-    width: 80%;
-    margin: 10px;
+.current__playing-box {
+    align-self: flex-end;
+    line-height: 50px;
 }
+
+@media(max-width:1300px) {
+    .media-player__container {
+        flex-direction: column ;
+    }
+
+    .media-player__controls, 
+    .media-player__list--box {
+        width: 100%;
+        border: none;
+    }
+
+    .media-player__img {
+        max-width: 550px;
+        margin: 20px;
+    }
+
+}
+
+
+
+/* rgb(59, 155, 155);*/
